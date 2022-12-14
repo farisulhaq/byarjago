@@ -15,14 +15,14 @@
                     </svg>
                 </li>
                 <li class="flex items-center">
-                    <a href="#" class="font-medium">Website Developer</a>
+                    <a href="#" class="font-medium text-gray-400">Website Developer</a>
                 </li>
             </ol>
         </nav>
     </div>
 
     {{-- detail --}}
-    <section class="px-4 pt-6 pb-20 mx-auto w-auth lg:mx-12">
+    <section class="px-4 pt-6 pb-20 mx-auto w-auth lg:mx-12" style="color: white">
         <div class="grid gap-5 md:grid-cols-12">
             <main class="p-4 lg:col-span-8 md:col-span-12">
                 <!-- details heading -->
@@ -32,20 +32,20 @@
                         @include('components.landing.rating')
                     </div>
                 </div>
-                <div class="p-3 my-4 bg-gray-100 rounded-lg image-gallery" x-data="gallery()">
-                    <img :src="featured" alt="" class="rounded-lg cursor-pointer w-100" data-lity>
+                <!-- <div class="p-3 my-4 bg-gray-100 rounded-lg image-gallery" x-data="gallery()">
+                    {{-- <img :src="featured" alt="" class="rounded-lg cursor-pointer w-100" data-lity> --}}
                     <div class="flex overflow-x-scroll hide-scroll-bar dragscroll">
 
                         <div class="flex mt-2 flex-nowrap">
                             @forelse ($thumbnail as $item)
                                 <img :class="{ 'border-4 border-serv-button': active === {{ $item->id }} }" @click="changeThumbnail('{{ url(Storage::url($item->thumbnail)) }}', {{ $item->id }})" src="{{ url(Storage::url($item->thumbnail)) }}" alt="thumbnail service" class="inline-block mr-2 rounded-lg cursor-pointer h-20 w-36 object-cover">
                             @empty
-                                {{-- empty --}}
+                                
                             @endforelse
                         </div>
 
                     </div>
-                </div>
+                </div> -->
                 <div class="content">
                     <div x-data="{ tab: window.location.hash ? window.location.hash.substring(1) : 'description' }" id="tab_wrapper">
                         <!-- The tabs navigation -->
@@ -57,13 +57,13 @@
 
                         <!-- The tabs content -->
                         <div x-show.transition.duration.500ms="tab === 'description'" class="leading-8 text-md">
-                            <h2 class="text-xl font-semibold">About This <span class="text-serv-button">Services</span></h2>
+                            <h2 class="text-xl font-semibold">About This <span class="text-serv-button">Classes</span></h2>
                             <div class="mt-4 mb-8 content-description">
                                 <p>
                                     {{ $service->description ?? '' }}
                                 </p>
                             </div>
-                            <h3 class="my-4 text-lg font-semibold">Why choose my Service?</h3>
+                            <h3 class="my-4 text-lg font-semibold">Why choose my Class?</h3>
                             <ul class="mb-4 list-check">
                                 @forelse ($advantage_service as $advantage_service_item)
                                     <li class="pl-10 my-2">{{ $advantage_service_item->advantage ?? '' }}</li>
@@ -94,7 +94,7 @@
 
                                     </div>
                                     <div class="flex-grow p-4 -mt-8 leading-8 lg:mt-0">
-                                        <div class="text-lg font-semibold text-gray-700">
+                                        <div class="text-lg font-semibold text-white">
                                             {{ $service->user->name ?? '' }}
                                         </div>
                                         <div class="text-gray-400">
@@ -162,7 +162,7 @@
 
                         <div class="w-full">
                             <div class="flex items-center justify-between">
-                                <h2 class="my-1 text-xl font-medium text-serv-bg">{{ $service->user->name ?? '' }}</h2>
+                                <h2 class="my-1 text-xl font-medium text-white">{{ $service->user->name ?? '' }}</h2>
                             </div>
                             <p class="text-md text-serv-text">
                                 {{ $service->user->detail_user->role ?? '' }}
@@ -171,7 +171,7 @@
                     </div>
                     <div class="flex items-center px-2 py-3 mx-4 mt-4 border rounded-full border-serv-testimonial-border">
                         <div class="flex-1 text-sm font-medium text-center">
-                            <svg class="inline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="inline text-white" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="12" cy="12" r="8" stroke="#082431" stroke-width="1.5" />
                                 <path d="M12 7V12L15 13.5" stroke="#082431" stroke-width="1.5" stroke-linecap="round" />
                             </svg>

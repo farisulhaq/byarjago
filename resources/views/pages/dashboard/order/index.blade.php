@@ -96,17 +96,20 @@
                                         </td>
                                         <td class="px-1 py-5 text-sm">
                                             @if($order->order_status_id == '1')
-                                                <a href="{{ route('member.order.show', $order->id) }}" class="px-4 py-2 mt-1 mr-2 text-center text-white rounded-xl bg-serv-email">Details</a>
+                                                {{-- <a href="{{ route('member.order.show', $order->id) }}" class="px-4 py-2 mt-1 mr-2 text-center text-white rounded-xl bg-serv-email">Details</a> --}}
 
                                                 <p class="px-4 py-2 mt-2 inline text-left text-green-500">
                                                     Approved
                                                 </p>
                                             @elseif($order->order_status_id == '2')
-                                                <a href="{{ route('member.order.show', $order->id) }}" class="px-4 py-2 mt-1 mr-2 text-center text-white rounded-xl bg-serv-email">Details</a>
+                                                {{-- <a href="{{ route('member.order.show', $order->id) }}" class="px-4 py-2 mt-1 mr-2 text-center text-white rounded-xl bg-serv-email">Details</a> --}}
 
-                                                <a href="{{ route('member.order.edit', $order->id) }}" class="px-4 py-2 mt-2 text-center text-white rounded-xl bg-serv-email">Submit</a>
+                                                {{-- <a href="{{ route('member.order.edit', $order->id) }}" class="px-4 py-2 mt-2 text-center text-white rounded-xl bg-serv-email">Submit</a> --}}
+                                                <p class="px-4 py-2 mt-2 inline text-left text-green-500">
+                                                    Accepted
+                                                </p>
                                             @elseif($order->order_status_id == '3')
-                                                <a href="{{ route('member.order.show', $order->id) }}" class="px-4 py-2 mt-1 mr-2 text-center text-white rounded-xl bg-serv-email">Details</a>
+                                                {{-- <a href="{{ route('member.order.show', $order->id) }}" class="px-4 py-2 mt-1 mr-2 text-center text-white rounded-xl bg-serv-email">Details</a> --}}
 
                                                 <p class="px-4 py-2 mt-2 inline text-left text-red-500">
                                                     Rejected

@@ -1,5 +1,5 @@
 <a href="{{ route('detail.landing', $item->id) }}" class="inline-block px-3">
-    <div class="w-96 h-auto overflow-hidden md:p-5 p-4 bg-white rounded-2xl inline-block">
+    <div class="w-96 h-auto overflow-hidden md:p-5 p-4 rounded-2xl inline-block bg-serv-bg text-white">
         <div class="flex items-center space-x-2 mb-6">
 
             @if ($item->user->detail_user->photo != NULL)
@@ -12,7 +12,7 @@
 
             <div>
                 <!--Author name-->
-                <p class="text-gray-900 font-semibold text-lg">{{ $item->user->name ?? '' }}</p>
+                <p class="text-white font-semibold text-lg">{{ $item->user->name ?? '' }}</p>
                 <p class="text-serv-text font-light text-md">
                     {{ $item->user->detail_user->role ?? '' }}
                 </p>

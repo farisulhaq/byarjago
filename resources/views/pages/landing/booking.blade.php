@@ -7,7 +7,7 @@
     <section class="w-auto flex min-h-[85vh] pt-6 pb-20 mx-auto lg:mx-12 px-4">
         <div class="m-auto text-center h-auto">
 
-            <svg class="mb-6 w-full" width="490" height="350" viewBox="0 0 490 350" fill="none"
+            {{-- <svg class="mb-6 w-full" width="490" height="350" viewBox="0 0 490 350" fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink">
                 <circle cx="245" cy="175" r="174" stroke="#F4F4FA" stroke-width="2" stroke-linecap="round"/>
@@ -66,13 +66,13 @@
                     <!-- Gambar kanan -->
                     <image id="image1" width="500" height="500" xlink:href="https://randomuser.me/api/portraits/men/97.jpg"/>
                 </defs>
-            </svg>
+            </svg> --}}
 
-            <h1 class="text-3xl font-bold mb-4">Successful Booking</h1>
+            <h1 class="text-3xl font-bold mb-4 text-white">Successful Booking</h1>
 
             <p class="leading-8 text-serv-text mb-6"> To continue payment, please contact directly <br class="lg:block hidden">our Freelancer through WhatsApp</p>
 
-            <a href="http://wa.me/628123456789" class="bg-serv-button text-white text-md font-medium py-4 w-80 my-2 rounded-2xl text-center inline-block">Continue to Chat</a>
+            <a href="http://wa.me/6281225212876" class="bg-serv-button text-white text-md font-medium py-4 w-80 my-2 rounded-2xl text-center inline-block">Continue to Chat</a>
 
             <br>
 

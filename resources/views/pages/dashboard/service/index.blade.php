@@ -13,13 +13,13 @@
                             My Services
                         </h2>
                         <p class="text-sm text-gray-400">
-                            {{ auth()->user()->service()->count() }} Total Services
+                            {{ auth()->user()->service()->count() }} Total Class Mentoring
                         </p>
                     </div>
                     <div class="col-span-4 lg:text-right">
                         <div class="relative mt-0 md:mt-6">
                             <a href="{{ route('member.service.create') }}" class="inline-block px-4 py-2 mt-2 text-left text-white rounded-xl bg-serv-button">
-                                + Add Service
+                                + Add Class Mentoring
                             </a>
                         </div>
                     </div>
@@ -33,7 +33,7 @@
                             <table class="w-full" aria-label="Table">
                                 <thead>
                                     <tr class="text-sm font-normal text-left text-gray-900 border-b border-b-gray-600">
-                                        <th class="py-4" scope="">Service Details</th>
+                                        <th class="py-4" scope="">Class Mentor</th>
                                         <th class="py-4" scope="">Role</th>
                                         <th class="py-4" scope="">Price</th>
                                         <th class="py-4" scope="">Status</th>
@@ -74,7 +74,7 @@
                                             </td>
                                             <td class="px-1 py-5 text-sm">
                                                 <a href="{{ route('member.service.edit', $service['id']) }}" class="px-4 py-2 mt-2 text-left text-white rounded-xl bg-serv-email">
-                                                    Edit Service
+                                                    Edit Class
                                                 </a>
                                             </td>
                                         </tr>
@@ -94,18 +94,18 @@
     @else
         <div class="flex h-screen">
             <div class="m-auto text-center">
-                <img src="{{ asset('/assets/images/empty-illustration.svg') }}" alt="" class="w-48 mx-auto">
+                {{-- <img src="{{ asset('/assets/images/empty-illustration.svg') }}" alt="" class="w-48 mx-auto"> --}}
                 <h2 class="mt-8 mb-1 text-2xl font-semibold text-gray-700">
-                    There is No Requests Yet
+                    There is No Class Mentor Yet
                 </h2>
                 <p class="text-sm text-gray-400">
                     It seems that you haven’t provided any service. <br>
-                    Let’s create your first service!
+                    Let’s create your first Class Mentor!
                 </p>
 
                 <div class="relative mt-0 md:mt-6">
                     <a href="{{ route('member.service.create') }}" class="px-4 py-2 mt-2 text-left text-white rounded-xl bg-serv-button">
-                        + Add Services
+                        + Add Class Mentor
                     </a>
                 </div>
             </div>

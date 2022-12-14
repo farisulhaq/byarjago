@@ -95,4 +95,9 @@ class User extends Authenticatable
         return $this->hasMany('App\Models\Order', 'freelancer_id');
     }
 
+    public function role_user()
+    {
+        return $this->hasOne(RoleUser::class);
+    }
+
 }

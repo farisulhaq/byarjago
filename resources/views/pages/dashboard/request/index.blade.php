@@ -90,10 +90,10 @@
                                             <td class="px-1 py-5 text-sm">
                                                 {{ 'Rp '.number_format($order->service->price) ?? '' }}
                                             </td>
-                                            <td class="px-1 py-5 text-sm text-green-500
+                                            <td class="px-1 py-5 text-sm
                                                 @if($order->order_status_id == '1')
                                                     {{ 'text-green-500' }}
-                                                @elseif($order->order_status_id == '2')
+                                                @elseif($order->order_status_id == '2' || $order->order_status_id == '4')
                                                     {{ 'text-yellow-500' }}
                                                 @elseif($order->order_status_id == '3')
                                                     {{ 'text-red-500' }}
@@ -102,9 +102,11 @@
                                                 {{ $order->order_status->name ?? '' }}
                                             </td>
                                             <td class="px-1 py-5 text-sm">
-                                                <a href="{{ route('member.request.show', $order->id) }}" class="px-4 py-2 mt-2 text-left text-white rounded-xl bg-serv-email">
-                                                    Details
+                                                @if($order->order_status_id == '2')
+                                                <a href="http://wa.me/6281225212876" target="_blank" class="px-4 py-2 mt-2 text-left text-white rounded-xl bg-serv-email">
+                                                    Hubungi Mentor
                                                 </a>
+                                                @endif                                              
                                             </td>
                                         </tr>
                                     @empty
@@ -121,18 +123,18 @@
     @else
         <div class="flex h-screen">
             <div class="m-auto text-center">
-                <img src="{{ asset('/assets/images/empty-illustration.svg') }}" alt="" class="w-48 mx-auto">
+                {{-- <img src="{{ asset('/assets/images/empty-illustration.svg') }}" alt="" class="w-48 mx-auto"> --}}
                 <h2 class="mt-8 mb-1 text-2xl font-semibold text-gray-700">
-                    There is No Request Yet
+                    There is No Class Mentoring Yet
                 </h2>
                 <p class="text-sm text-gray-400">
                 It seems that you haven’t ordered any service. <br>
-                Let’s order your first service!
+                Let’s order your first Class Mentoring!
                 </p>
 
                 <div class="relative mt-0 md:mt-6">
                     <a href="{{ route('explore.landing') }}" class="px-4 py-2 mt-2 text-left text-white rounded-xl bg-serv-button">
-                        Find Services
+                        Find Class Mentor
                     </a>
                 </div>
             </div>

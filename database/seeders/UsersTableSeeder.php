@@ -17,23 +17,18 @@ class UsersTableSeeder extends Seeder
     {
         $users = [
             [
-                'name'              => 'John Doe',
-                'email'             => 'john@mail.com',
-                'password'          => Hash::make('Admin@12345'),
+                
                 'remember_token'    => NULL,
                 'created_at'        => date('Y-m-d h:i:s'),
                 'updated_at'        => date('Y-m-d h:i:s'),
-            ],
-            [
-                'name'              => 'Jane Doe',
-                'email'             => 'jane@mail.com',
-                'password'          => Hash::make('Admin@12345'),
-                'remember_token'    => NULL,
-                'created_at'        => date('Y-m-d h:i:s'),
-                'updated_at'        => date('Y-m-d h:i:s'),
-            ],
+            ]
         ];
 
-        User::insert($users);
+        $user = User::create([
+            'name'              => 'Faris',
+            'email'             => 'faris@gmail.com',
+            'password'          => Hash::make('Admin@123'),
+        ]);
+        $user->role_user()->create(['role' => '1']);
     }
 }

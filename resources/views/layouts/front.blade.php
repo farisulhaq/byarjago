@@ -4,7 +4,7 @@
 
         @include('includes.landing.meta')
 
-        <title>@yield('title') | SERV</title>
+        <title>@yield('title') | ByarJago</title>
 
         @stack('before-style')
 
@@ -14,7 +14,7 @@
 
     </head>
     <body class="antialiased">
-        <div class="relative">
+        <div class="relative" style="background-color: rgb(18, 14,35)">
 
             @include('includes.landing.header')
 
